@@ -62,15 +62,9 @@ if app_mode == "☕ dashboard 1: Ethiopia Coffee Market Analytics":  # If user s
         """
 <div style="background-color: #4A2C11; padding: 15px; border-radius: 6px; color: white; margin-bottom: 2px;">   
     <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-        <h1 style="margin: 0; color: white; font-size: 2rem;">☕ Ethiopia Coffee Market Dashboard And Dynamic Upload & Analytics dashboard"</h1>   
+        <h1 style="margin: 0; color: white; font-size: 2rem;">☕ Ethiopia Coffee Market And Dynamic Upload & Analytics dashboard</h1>   
         <div style="text-align: right; whitespace: nowrap;">
-            <span style="font-size: 2rem; color: #EED9C4; font-weight: bold;">Awoke Tiruneh</span> <br>
-            <span style="font-size: 1.5rem; color: #D7C4B7;">Bahir Dar University</span>
-        </div>
-    </div>
-    <p style="margin: 5px 0 0 0; color: #F5E6CA; font-size: 1.05rem;">   
-        Analytical dashboard — Use the filters on the left to explore prices, trading volume and market trends.
-    </p>
+    
 </div>
     """,
         unsafe_allow_html=True,  # Allow inline HTML rendering
