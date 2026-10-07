@@ -4,7 +4,7 @@ import numpy as np  # Import NumPy for numerical calculations
 import plotly.express as px  # Import Plotly Express for quick interactive charts
 import plotly.graph_objects as go  # Import Plotly Graph Objects for custom charts 
 from plotly.subplots import make_subplots 
-from statsmodels.tsa.holtwinters import ExponentialSmoothing 
+
      
 # Configure page settings (title, tab icon, and layout behavior)
 st.set_page_config(
@@ -62,7 +62,7 @@ if app_mode == "☕ dashboard 1: Ethiopia Coffee Market Analytics":  # If user s
         """
 <div style="background-color: #4A2C11; padding: 15px; border-radius: 6px; color: white; margin-bottom: 2px;">   
     <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-        <h1 style="margin: 0; color: white; font-size: 2rem;">☕ Ethiopia Coffee Market Dashboard</h1>   
+        <h1 style="margin: 0; color: white; font-size: 2rem;">☕ Ethiopia Coffee Market Dashboard And Dynamic Upload & Analytics dashboard"</h1>   
         <div style="text-align: right; whitespace: nowrap;">
             <span style="font-size: 2rem; color: #EED9C4; font-weight: bold;">Awoke Tiruneh</span> <br>
             <span style="font-size: 1.5rem; color: #D7C4B7;">Bahir Dar University</span>
@@ -633,8 +633,14 @@ else:  # If user selects Mode 2 (Dynamic Upload & Analytics Engine)
                 include=["object", "category"] 
             ).columns.tolist() 
  
+            st.markdown("""
+    <div style="background-color:#1B5E20; color:white; font-size:15px; font-weight:700;
+    padding:6px 10px; border-radius:8px; text-align:center; margin-top:0px; margin-bottom:15px;">
+     Key Performance Indicators (KPIs) Overview
+    </div>
+    """, unsafe_allow_html=True)  # Render green header bar for KPI section
             # Section 1 Header for dataset overview 
-            st.subheader("1. Dataset Overview & Key Performance Indicators") 
+            
  
             # Create 4 columns for displaying raw overview KPIs 
             p1, p2, p3, p4 = st.columns(4) 
@@ -685,7 +691,14 @@ else:  # If user selects Mode 2 (Dynamic Upload & Analytics Engine)
                 )  # Display warning if no numbers found 
  
             # Section 2 Header for Cross-Tabulation 
-            st.subheader("2. Automated Cross-Tabulation Analysis") 
+            
+            st.markdown("""
+    <div style="background-color:#0F172A; color:white; font-size:15px; font-weight:700;
+    padding:6px 10px; border-radius:8px; text-align:center; margin-top:0px; margin-bottom:15px;">
+     2. Automated Cross-Tabulation Analysis
+    </div>
+    """, unsafe_allow_html=True)  # Render green header bar for KPI section
+            
  
             # Wrap Cross-Tabulation inside a collapsed expander panel 
             with st.expander( 
@@ -926,7 +939,7 @@ else:  # If user selects Mode 2 (Dynamic Upload & Analytics Engine)
  
             # Section 4 Header for Smart Automated Insights 
             st.markdown("---") 
-            st.subheader("4.Automated Smart Insights (8 Key Takeaways)") 
+            st.subheader("4.Automated Smart Insights ") 
  
             # Wrap Smart Insights inside a collapsed expander panel 
             with st.expander( 
@@ -1082,7 +1095,7 @@ else:  # If user selects Mode 2 (Dynamic Upload & Analytics Engine)
             # Section 6 Header for Raw Data Preview 
             st.markdown("---") 
             st.subheader("") 
-            with st.expander("📋 View Raw Data Preview", expanded=False): 
+            with st.expander("📋 View Raw Data ", expanded=False): 
                 st.dataframe( 
                     raw_df.head(10), use_container_width=True 
                 )  # Display head of raw dataframe 
